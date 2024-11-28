@@ -24,17 +24,21 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("My Gallery",
-              style: TextStyle(
-                  fontSize: 30,
-                  color: Color.fromARGB(255, 15, 15, 15),
-                  fontWeight: FontWeight.bold),
+      theme: ThemeData(
+        navigationBarTheme: NavigationBarThemeData(
+          indicatorColor: const Color.fromARGB(255, 255, 255, 255),
+          backgroundColor: const Color.fromARGB(255, 2, 2, 2),
+          labelTextStyle: WidgetStateProperty.all(
+            const TextStyle(
+              color: Colors.white, // Farbe der Labels
+              fontSize: 14,
             ),
           ),
+        ),
+      ),
+      home: Scaffold(
         body: Container(
-          decoration: const BoxDecoration(
+          decoration:  const BoxDecoration(
             gradient: LinearGradient(
               colors: [
                 Color.fromARGB(180, 35, 36, 37),
@@ -45,6 +49,8 @@ class _MainAppState extends State<MainApp> {
           child: widgets[currentIndex],
         ),
         bottomNavigationBar: NavigationBar( 
+          indicatorColor: const Color.fromARGB(255, 255, 255, 255),
+          backgroundColor: const Color.fromARGB(255, 2, 2, 2),
           selectedIndex: currentIndex,
           onDestinationSelected: (int index) { // zum seiten wechseln
             setState(() {
