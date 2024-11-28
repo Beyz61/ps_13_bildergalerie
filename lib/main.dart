@@ -25,6 +25,14 @@ class _MainAppState extends State<MainApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: const Text("My Gallery",
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Color.fromARGB(255, 15, 15, 15),
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
