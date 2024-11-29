@@ -30,7 +30,7 @@ class _MainAppState extends State<MainApp> {
           backgroundColor: const Color.fromARGB(255, 2, 2, 2),
           labelTextStyle: WidgetStateProperty.all(
             const TextStyle(
-              color: Colors.white, // Farbe der Labels
+              color: Colors.white, 
               fontSize: 14,
             ),
           ),
@@ -49,9 +49,10 @@ class _MainAppState extends State<MainApp> {
           child: widgets[currentIndex],
         ),
         bottomNavigationBar: NavigationBar( 
-          indicatorColor: const Color.fromARGB(255, 255, 255, 255),
+          indicatorColor: const Color.fromARGB(255, 255, 255, 255), 
           backgroundColor: const Color.fromARGB(255, 2, 2, 2),
-          selectedIndex: currentIndex,
+
+          selectedIndex: currentIndex,//
           onDestinationSelected: (int index) { // zum seiten wechseln
             setState(() {
               currentIndex = index; //  ausgewählte seite wird angezeigt

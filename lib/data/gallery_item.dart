@@ -1,6 +1,7 @@
 import 'package:ps_13_bildergalerie/data/gallery_item_class.dart';
 
 List<GalleryItem> galleryData = [
+  
   GalleryItem(
     imageTitle: 'Bunter Basketball',
     imageDate: '03.06.2023',
