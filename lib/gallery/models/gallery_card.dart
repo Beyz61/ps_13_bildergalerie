@@ -8,10 +8,11 @@ class GalleryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card( // Karte für das Bild
+    return Card(
       margin: const EdgeInsets.all(12.0),
       color: Colors.white.withOpacity(0.8),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0)), 
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
@@ -20,9 +21,9 @@ class GalleryCard extends StatelessWidget {
             ClipRRect( // ist dafür da, dass das Bild abgerundet ist
               borderRadius: BorderRadius.circular(12.0),
               child: Image.asset(
-                item.imagePath, 
+                item.imagePath,
                 height: 200,
-                width: double.infinity, //breite des Bildes
+                width: double.infinity,
                 fit: BoxFit.cover,
               ),
             ),
@@ -34,7 +35,18 @@ class GalleryCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-         
+          //   const SizedBox(height: 4),
+          //   Text(
+          //     item.imageDate,
+          //     style: const TextStyle(color: Colors.grey),
+          //   ),
+          //   const SizedBox(height: 8),
+          //   Text(
+          //     item.imageDescription,
+          //     style: const TextStyle(fontSize: 14),
+          //     maxLines: 3,
+          //     overflow: TextOverflow.ellipsis,
+          //   ),
            ],
         ),
       ),

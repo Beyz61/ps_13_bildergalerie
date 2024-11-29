@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ps_13_bildergalerie/data/gallery_item.dart';
-import 'package:ps_13_bildergalerie/detail_screen.dart';
-import 'package:ps_13_bildergalerie/gallery_card.dart';
+import 'package:ps_13_bildergalerie/gallery/models/gallery_card.dart';
+import 'package:ps_13_bildergalerie/gallery/screens/detail_screen.dart';
 
 class GalleryWidget extends StatelessWidget {
   const GalleryWidget({super.key});
@@ -49,16 +49,17 @@ child: ListView.builder( // ich kann durch die Bilder scrollen
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const DetailScreen( // komme so zum DetailScreen
+            builder: (context) => DetailScreen( // komme so zum DetailScreen
+              item: galleryItem,
             ),
           ),
         );
       },
       child: GalleryCard(item: galleryItem), // hole mir die Bilder aus der gallery_card.dart
-    );
-  },
-),
+        );
+       },
       ),
+     ),
     );
   }
 }
