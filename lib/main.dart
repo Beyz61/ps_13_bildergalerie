@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ps_13_bildergalerie/about_me_widget.dart';
-import 'package:ps_13_bildergalerie/gallery_widget.dart';
+import 'package:ps_13_bildergalerie/gallery/screens/gallery_widget.dart';
+import 'package:ps_13_bildergalerie/profil/about_me_widget.dart';
 
 void main() {
   runApp(const MainApp());
