@@ -22,7 +22,7 @@ class GalleryCard extends StatelessWidget {
               child: Image.asset(
                 item.imagePath, 
                 height: 200,
-                width: double.infinity,
+                width: double.infinity, //breite des Bildes
                 fit: BoxFit.cover,
               ),
             ),
